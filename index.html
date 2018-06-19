@@ -1,187 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>   &lt;3 M2GEN Music - Feel Better Through Sound!</title>
-
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="css/m2genmusic.css" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/aos/aos.css" />
-  </head>
-
-  <body id="home">
-
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+<head>
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+   <meta content="" name="description">
+   <meta content="" name="author">
+   <title>&lt;3 M2GEN Music - Feel Better Through Sound!</title>
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+   <link href="css/m2genmusic.css" rel="stylesheet">
+   <link href="vendor/aos/aos.css" rel="stylesheet">
+   <script src="http://code.jquery.com/jquery.min.js">
+   </script>
+   <script>
+    $(function(){
+        $.getJSON('albums.json',function(data){
+            console.log('success');
+            $.each(data.feed.results,function(i,result){
+                $('#albumdata').append('<div data-aos="zoom-in-up" class="col-sm-6 col-lg-2  col-md-4 albumart aos-item aos-init aos-animate"><a href="'+result.url+'" target=_blank><img class="albumart" style="width: 100%; max-width: 200px;" src='+result.artworkUrl100+'/><\/a><p class="album-title">'+result.name+'<\/p><p class="artist-name">'+result.artistName+'<\/p><\/div>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+   </script>
+</head>
+<body id="home">
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home"><img class="navbar-logo" src="img/m2gen-music.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#top100">TOP 100</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SEARCH</a>
-            </li>
-          </ul>
-        </div>
+         <a class="navbar-brand" href="#home"><img alt="" class="navbar-logo" src="img/m2gen-music.png"></a> <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="#home">HOME</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#about">ABOUT</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#top100">TOP 100</a>
+               </li>
+            </ul>
+         </div>
       </div>
-    </nav>
-
-
-
-    <header class="masthead text-center text-white">
+   </nav>
+   <header class="masthead text-center text-white">
       <div class="masthead-content">
-        <div class="container">
-          <h1 class="masthead-heading mb-0 heavy">Heal Your Soul</h1>
-          <h4 class="masthead-subheading mb-0">We offer the best music. For free.</h4>
-          <a href="#top100" class="btn btn-primary btn-xl rounded-pill mt-5">Full List of Free Music</a>
-        </div>
+         <div class="container">
+            <h1 class="masthead-heading mb-0 heavy">Heal Your Soul</h1>
+            <h4 class="masthead-subheading mb-0">We offer the best albums. For free.</h4><a class="btn btn-primary btn-xl rounded-pill mt-5" href="#top100">Full List of Free Music</a>
+         </div>
       </div>
-
-        <div class="bg-square-1 bg-square"></div>
-        <div class="bg-square-2 bg-square"></div>
-        <div class="bg-square-3 bg-square"></div>
-        <div class="bg-square-4 bg-square"></div>
-
-    </header>
-
-
-    <section id="about">
+      <div class="bg-square-1 bg-square"></div>
+      <div class="bg-square-2 bg-square"></div>
+      <div class="bg-square-3 bg-square"></div>
+      <div class="bg-square-4 bg-square"></div>
+   </header>
+   <section id="about">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12" id="top10"><h2 class="main-title">About M2GEN<sub>Music</sub></h2></div>
-          <div class="col-lg-6 order-lg-2">
-            <div class="more-padding">
-           
-<div class="heart aos-item"  data-aos="zoom-in-up" style="">
-    <svg width="300" height="250">
-        <image xlink:href="img/01.jpg" width="300" height="300" />
-    </svg>
-</div>
+         <div class="row align-items-center">
+            <div class="col-lg-12" id="top10">
+               <h2 class="main-title">About M2GEN<span style="color: #06a677">Music</span></h2>
             </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="more-padding">
-              <h2 class="display-4">Headline No.1</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <div class="col-lg-6 order-lg-2">
+               <div class="more-padding">
+                  <div class="heart aos-item" data-aos="zoom-in-up" style="">
+                     <svg height="250" width="300">
+                     <image height="300" width="300" xlink:href="img/01.jpg"></image></svg>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+            <div class="col-lg-6 order-lg-1">
+               <div class="more-padding">
+                  <h2 class="display-4">Free, curated music - for you</h2>
+                  <p>Music makes us feel better. M2GEN Music gathers the best Top 100 albums for you, for free! How do we do it? This is thanks to promo code arrangements with our generous sponsors. You can check them out <strong><a href="#sponsors">below</a></strong>.</p>
+               </div>
+            </div>
+         </div>
       </div>
-    </section>
-
-    <section>
+   </section>
+   <section>
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="more-padding">
-             
-
-<div class="heart aos-item"  data-aos="zoom-in-up">
-    <svg width="300" height="250">
-        <image xlink:href="img/02.jpg" width="300" height="300" />
-    </svg>
-</div>
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <div class="more-padding">
+                  <div class="heart aos-item" data-aos="zoom-in-up">
+                     <svg height="250" width="300">
+                     <image height="300" width="300" xlink:href="img/02.jpg"></image></svg>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="more-padding">
-              <h2 class="display-4">Headline No.2</h2>
-                    
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <div class="col-lg-6">
+               <div class="more-padding">
+                  <h2 class="display-4">Free live music?</h2>
+                  <p>Be sure to check back regularly to see what new music is available. We keep adding albums every day. Please also consider supporting your favorite musicians by attending their live concerts! If that's not enough, every month we give away 200 concert tickets!</p>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
+         </div>
+      </div><svg class="" style="height: 3rem">
+      <defs>
+         <clippath id="heart-clip">
+            <path d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883 C9.354,22.632-10.863,70.009,5.887,111.696c16.06,39.98,143.314,139.607,143.314,139.607l0.359,0.28l0.36-0.28 c0,0,127.251-99.627,143.314-139.607C309.986,70.009,289.768,22.632,248.078,5.883z" id="heart"></path>
+         </clippath>
+      </defs></svg>
+   </section>
+   <section id="top100">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="more-padding">
-           
-<div class="heart aos-item"  data-aos="zoom-in-up" style="">
-    <svg width="300" height="250">
-        <image xlink:href="img/03.jpg" width="300" height="300" />
-    </svg>
-</div>
+         <div class="row align-items-center">
+            <div class="col-lg-12">
+               <h2 class="main-title">TOP 100</h2>
             </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="more-padding">
-              <h2 class="display-4">Headline No.3</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <div class="col-lg-6 order-lg-2"></div>
+            <div class="col-lg-12 order-lg-1">
+               <div class="more-padding text-center">
+                  <h2 class="display-4">Dig in!</h2>
+                  <p>All you have to do is click an album that will take you to its respective store that honors our <strong>promo code: LOVEM2GEN</strong> today.</p>
+                  <p>&nbsp;</p>
+                  <div class="row" id="albumdata"></div>
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-      <svg class="" style="height: 3rem">
-    <defs>
-        <clipPath id="heart-clip">
-            <path id="heart" d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883 C9.354,22.632-10.863,70.009,5.887,111.696c16.06,39.98,143.314,139.607,143.314,139.607l0.359,0.28l0.36-0.28 c0,0,127.251-99.627,143.314-139.607C309.986,70.009,289.768,22.632,248.078,5.883z"/>
-        </clipPath>
-    </defs>
-</svg>
-    </section>
-
-    <section id="top100">
-
+   </section>
+   <section class="py-5" id="sponsors">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12"><h2 class="main-title">TOP 100</h2></div>
-          <div class="col-lg-6 order-lg-2">
-   
-          </div>
-          <div class="col-lg-12 order-lg-1">
-            <div class="more-padding">
-              <h2 class="display-4">this is where the list will go</h2>
+         <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+               <h3 class="display-4">Sponsored by</h3>
+               <p>&nbsp;</p>
             </div>
-          </div>
-        </div>
+            <div class="col-md-3 col-sm-6">
+               <a href="#"><img alt="" class="img-fluid d-block mx-auto" src="img/space-cube.png"></a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <a href="#"><img alt="" class="img-fluid d-block mx-auto" src="img/att.png"></a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <a href="#"><img alt="" class="img-fluid d-block mx-auto" src="img/artek.png"></a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <a href="#"><img alt="" class="img-fluid d-block mx-auto" src="img/sega.png"></a>
+            </div>
+         </div>
       </div>
-    </section>
- 
-
-    <footer class="py-5 bg-navy">
+   </section>
+   <footer class="py-5 bg-navy">
       <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; Kat Korwes 2018</p>
+         <p class="m-0 text-center text-white small">Copyright &copy; Kat Korwes 2018</p>
       </div>
-    </footer>
-
-
-
-    <script src="vendor/aos/aos.js"></script>
-    <script>
+   </footer>
+   <script src="vendor/aos/aos.js">
+   </script> 
+   <script>
       AOS.init({
         easing: 'ease-in-out-sine'
       });
-    </script>
-
-    <!-- Bootstrap + JavaScript + external js -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <!-- smooth scroll -->
-    <script>    $('a[href^="#"]').on('click', function(event) {
+   </script> <!-- Bootstrap + JavaScript + external js -->
+    
+   <script src="vendor/jquery/jquery.min.js">
+   </script> 
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js">
+   </script> 
+   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js">
+   </script> 
+   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js">
+   </script> <!-- smooth scroll -->
+    
+   <script>
+    $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
         if( target.length ) {
             event.preventDefault();
@@ -190,8 +177,6 @@
             }, 1000);
         }
     });
-    </script>
-    <!-- /smooth scroll -->
-  </body>
-
+   </script> <!-- /smooth scroll -->
+</body>
 </html>
